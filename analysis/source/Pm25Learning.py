@@ -21,7 +21,8 @@ column_names = ["feature_no","date","site_name","daily_mean_pm_2_5_concentration
                 "day_of_week","weekday","season"
 
 ]
-raw_dataset = pd.read_csv("../../data/merged/all_w_aod.csv", header=0)
+
+raw_dataset = pd.read_csv("C:/Users/elira/Desktop/Python_Projects/PM2.5_Project/predicting_pm2.5/data/merged/all_w_aod.csv", header=0)
 
 dataset = raw_dataset.copy()
 print(dataset.tail())
@@ -42,10 +43,10 @@ test_dataset = refinedData.drop(train_dataset.index)
 train_dataset = train_dataset.dropna()
 test_dataset = test_dataset.dropna()
 
-# Plot pm 2.5 vs. average daily temp for funsies
+# Plot pm 2.5 vs. average daily temp 
 plt.scatter(test_dataset[["dly_tavg_normal"]],test_dataset[["daily_mean_pm_2_5_concentration"]])
 plt.xlabel("Average Daily Temp")
-plt.ylabel("Mean PM 2.5 ($\mu$g/$m^3$)")
+plt.ylabel("Mean PM 2.5 ($/mu$g/$m^3$)")
 plt.show()
 
 # Split off the dependent variable (pm 2.5 concentration) column

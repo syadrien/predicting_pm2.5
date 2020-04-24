@@ -4,7 +4,7 @@ import datetime
 import statsmodels.api as sm
 
 
-PATH = '/Users/Sarah/Documents/GitHub/final_project/data'
+PATH = 'C:/Users/elira/Desktop/Python_Projects/PM2.5_Project/predicting_pm2.5/data'
 #df = pd.read_csv(os.path.join(PATH,'merged_noaa_pm25_aod.csv'))
 all_df = pd.read_csv(os.path.join(PATH,'merged/merged_all.csv'))
 
